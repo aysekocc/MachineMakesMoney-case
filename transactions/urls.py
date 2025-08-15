@@ -4,7 +4,7 @@ from .views import TransactionListView, TransactionUploadView
 from drf_spectacular.views import (
     SpectacularAPIView,
     SpectacularSwaggerView,
-    SpectacularRedocView  # <- bunu ekle
+    SpectacularRedocView
 )
 urlpatterns = [
     path('', TransactionListView.as_view(), name='transactions-list'),

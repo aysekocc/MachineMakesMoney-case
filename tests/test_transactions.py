@@ -23,7 +23,7 @@ def create_user(db):
 @pytest.fixture
 def auth_client(api_client, create_user):
     user = create_user()
-    # JWT login yerine doğrudan kullanıcıyı authenticate ediyoruz
+
     api_client.force_authenticate(user=user)
     return api_client, user
 

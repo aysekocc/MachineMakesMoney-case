@@ -1,6 +1,5 @@
 #!/bin/bash
 
-# PostgreSQL hazır olana kadar bekle
 if [ "$DATABASE" = "postgres" ]
 then
     echo "Waiting for postgres..."
@@ -10,11 +9,10 @@ then
     echo "PostgreSQL started"
 fi
 
-# Migrasyon
 python manage.py migrate --noinput
 
-# Statik dosyalar
+
 python manage.py collectstatic --noinput
 
-# Gunicorn ile başlat
+
 gunicorn banka.wsgi:application --bind 0.0.0.0:8000

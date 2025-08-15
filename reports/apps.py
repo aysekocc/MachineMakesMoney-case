@@ -1,6 +1,6 @@
 
 from django.apps import AppConfig
-# transactions/apps.py
+
 from django.apps import AppConfig
 
 class TransactionsConfig(AppConfig):

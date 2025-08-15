@@ -5,13 +5,13 @@ from datetime import timedelta
 
 SECRET_KEY = config("SECRET_KEY")
 
-# Projenin kök dizini
+
 BASE_DIR = Path(__file__).resolve().parent.parent
 
-# Geliştirme modunda çalışıyoruz
+
 DEBUG = True
 
-# Geliştirme ortamı için boş bırakılabilir
+
 ALLOWED_HOSTS = ['localhost', '127.0.0.1']
 
 
@@ -34,7 +34,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',  # collectstatic için gerekli
-    # senin app'lerin
+
 
     'accounts',
     'reports',

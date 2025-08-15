@@ -9,7 +9,7 @@ services:
       POSTGRES_USER: banka_user
       POSTGRES_PASSWORD: banka_pass
     ports:
-      - "5432:5432"  # Host portunu 5432 olarak ayarla
+      - "5432:5432"
     volumes:
       - postgres_data:/var/lib/postgresql/data
   redis:
