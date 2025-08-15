@@ -1,0 +1,23 @@
+version: '3.8'
+
+services:
+  db:
+    image: postgres:15
+    restart: always
+    environment:
+      POSTGRES_DB: postgres
+      POSTGRES_USER: banka_user
+      POSTGRES_PASSWORD: banka_pass
+    ports:
+      - "5432:5432"  # Host portunu 5432 olarak ayarla
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+  redis:
+    image: redis:6
+    ports:
+      - "6379:6379"
+
+
+volumes:
+  postgres_data:
+
