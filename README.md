@@ -2,7 +2,7 @@
 # Banka Ekstre Yükleme ve KPI - Django REST API
 
 Bu repository, *Backend Developer Case Study* için hazırlanmış çalışır örnek bir Django REST API projesidir.
-Amaç: kullanıcıların CSV banka ekstrelerini yükleyip, işlemleri listeleyip KPI raporu alabilmeleri.
+Amaç: Kullanıcıların CSV banka ekstrelerini yükleyip, işlemleri listeleyip KPI raporu alabilmeleridir.
 
 ## Özellikler (MVP)
 - Kayıt / Giriş (JWT - djangorestframework-simplejwt)
@@ -15,16 +15,37 @@ Amaç: kullanıcıların CSV banka ekstrelerini yükleyip, işlemleri listeleyip
 - Swagger/OpenAPI via drf-spectacular
 - Örnek CSV ve tests
 
+## Teknolojiler
+
+- Python 3.10+
+- Django 4.x
+- Django REST Framework (DRF)
+- PostgreSQL
+- JWT Authentication (`djangorestframework-simplejwt`)
+- Swagger / OpenAPI (`drf-spectacular` & `drf-yasg`)
+- Celery & Redis (background task ve raporlama)
+- Pytest (testler için)
+
+## Kurulum
+
+1. **Depoyu klonlayın**
+
+```bash
+git clone <repo_link>
+cd banka_ekstre_project
+
 ## Hızlı başlangıç (local, sqlite)
 
-1. Ortam oluştur:
+Ortam oluştur:
 ```bash
 python -m venv .venv
 source .venv/bin/activate
 pip install -r requirements.txt
 ```
 
-2. Ayarlar (opsiyonel): `.env` dosyası ekleyebilirsiniz. Varsayılan sqlite kullanılır.
+2. Ayarlar (opsiyonel): `.env` dosyası ekleyebilirsiniz.
+SECRET_KEY=<django-secret-key>
+DEBUG=True
 
 3. Migration ve kullanıcı oluştur:
 ```bash
@@ -68,3 +89,7 @@ pytest
 
 ## Notlar
 - Bu proje bir başlangıç iskeletidir ve case study gereksinimlerine uygun şekilde genişletilebilir (Postgres, Celery, otomatik kategorileme vb).
+- Kullanım örneklerine proje çalıştırıldığında Swagger-ui dokümantasyonu ile ulaşabilirsiniz.
+- API doc: `http://127.0.0.1:8000/api/docs/`
+Proje sahibi: Ayşe Koç
+Tarih: 2025
